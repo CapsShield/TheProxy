@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/CapsShield/TheProxy#readme",
   "dependencies": {
+    "axios": "^0.21.1",
     "express": "^4.17.1",
     "path": "^0.12.7",
     "react": "^17.0.1",
