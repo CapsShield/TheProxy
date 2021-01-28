@@ -2,9 +2,10 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const axios = require('axios');
+const compression = require('compression');
 
 const port = 4000;
-
+app.use(compression());
 app.use(express.static(path.join(__dirname, '..', 'public')));
 app.use(express.urlencoded({
   extended: true
