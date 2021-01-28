@@ -14,7 +14,7 @@ app.use(express.urlencoded({
 
 app.get('/api/games/:id/photo', (req, res) => {
   let id = req.params.id
-  axios.get(`http://localhost:3000/api/games/${id}/photo`).then((response) => {
+  axios.get(`http://3.17.73.170:3000/api/games/${id}/photo`).then((response) => {
     res.status(200).send(response.data)
   })
     .catch((error) => {
@@ -25,7 +25,7 @@ app.get('/api/games/:id/photo', (req, res) => {
 
 app.get('/api/games/:id/game', (req, res) => {
   let id = req.params.id
-  axios.get(`http://localhost:3000/api/games/${id}/game`).then((response) => {
+  axios.get(`http://3.17.73.170:3000/api/games/${id}/game`).then((response) => {
     res.status(200).send(response.data)
   })
     .catch((error) => {
@@ -39,7 +39,7 @@ app.get('/api/games/:id/game', (req, res) => {
 
 app.get('/api/games/:id/reviews', (req, res) => {
   let id = req.params.id
-  axios.get(`http://localhost:3000/api/games/${id}/reviews`).then((response) => {
+  axios.get(`http://3.17.73.170:3000/api/games/${id}/reviews`).then((response) => {
     res.status(200).send(response.data)
   })
     .catch((error) => {
@@ -52,7 +52,7 @@ app.get('/api/games/:id/reviews', (req, res) => {
 
 app.get('/api/games/:id/recentReviews', (req, res) => {
   let id = req.params.id;
-  axios.get(`http://localhost:3000/api/games/${id}/recentReviews`).then((response) => {
+  axios.get(`http://3.17.73.170:3000/api/games/${id}/recentReviews`).then((response) => {
     res.status(200).send(response.data)
   })
     .catch((error) => {
@@ -64,7 +64,7 @@ app.get('/api/games/:id/recentReviews', (req, res) => {
 
 app.get('/api/games/:id/userTags', (req, res) => {
   let id = req.params.id
-  axios.get(`http://localhost:3000/api/games/${id}/userTags`).then((response) => {
+  axios.get(`http://3.17.73.170:3000/api/games/${id}/userTags`).then((response) => {
     res.status(200).send(response.data)
   })
     .catch((error) => {
@@ -77,7 +77,7 @@ app.get('/api/games/:id/userTags', (req, res) => {
 
 // Reviews API
 app.get('/api/games/:id/reviews/:page', (req, res) => {
-  axios.get(`http://localhost:3002/api/games/${req.params.id}/reviews/${req.params.page}`, { params: req.query })
+  axios.get(`http://13.59.173.194:3002/api/games/${req.params.id}/reviews/${req.params.page}`, { params: req.query })
     .then((response) => res.send(response.data))
     .catch((err) => res.status(500).send(err));
 }
@@ -85,19 +85,19 @@ app.get('/api/games/:id/reviews/:page', (req, res) => {
 
 
 app.get('/api/games/:id/filterCounts', (req, res) => {
-  axios.get(`http://localhost:3002/api/games/${req.params.id}/filterCounts`)
+  axios.get(`http://13.59.173.194:3002/api/games/${req.params.id}/filterCounts`)
     .then((response) => res.send(response.data))
     .catch((err) => res.status(500).send(err));
 });
 
 app.get('/api/games/:id/summary', (req, res) => {
-  axios.get(`http://localhost:3002/api/games/${req.params.id}/summary`, { params: req.query })
+  axios.get(`http://13.59.173.194:3002/api/games/${req.params.id}/summary`, { params: req.query })
     .then((response) => res.send(response.data))
     .catch((err) => res.status(500).send(err));
 });
 
 app.get('/api/games/:id/summary/filterOnly', (req, res) => {
-  axios.get(`http://localhost:3002/api/games/${req.params.id}/summary/filterOnly`, { params: req.query })
+  axios.get(`http://13.59.173.194:3002/api/games/${req.params.id}/summary/filterOnly`, { params: req.query })
     .then((response) => res.send(response.data))
     .catch((err) => res.status(500).send(err));
 });
